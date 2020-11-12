@@ -1,17 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Pokemon = (props) => {
-  console.log(props);
   return (
     <>
-      <img
-        src={props.pokemon.url}
-        alt={props.pokemon.name}
-        title={props.pokemon.name}
-      />
-      <h3>{props.name}</h3>
+      <img src={props.url} alt={props.name} title={props.name} />
+      <h3 className="namePokemon">{props.name}</h3>
       <ul className="pokemonsTypes">
-        {props.pokemon.types.map((item, index) => {
+        {props.types.map((item, index) => {
           return (
             <li className="pokemonTypes" key={index}>
               {item}
@@ -21,6 +17,12 @@ const Pokemon = (props) => {
       </ul>
     </>
   );
+};
+
+Pokemon.propsTypes = {
+  url: PropTypes.string,
+  name: PropTypes.string,
+  types: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Pokemon;

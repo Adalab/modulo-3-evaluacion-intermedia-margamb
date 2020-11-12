@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+.namePokemon {
+  text-align: center;
+}
+
 .pokemosUl {
   display: flex;
   flex-direction: row;
@@ -39,3 +43,5 @@
   text-align: center;
   color: hotpink;
 }
+
+// Falta -> Separar css en componentes
