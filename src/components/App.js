@@ -1,11 +1,16 @@
+import React, { useState } from 'react';
+import apiPoke from '../components/data/apiPoke.json';
+import Pokelist from './PokeList';
 import './App.scss';
 
-function App() {
+const App = () => {
+  const [pokemons] = useState(apiPoke);
+
   return (
     <div className="App">
-      <h1>Hi</h1>
+      <Pokelist pokemons={pokemons} />
     </div>
   );
-}
+};
 
 export default App;
