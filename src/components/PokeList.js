@@ -3,10 +3,10 @@ import Pokemon from './Pokemon';
 
 const PokeList = (props) => {
   return (
-    <ul>
+    <ul className="pokemosUl">
       {props.pokemons.map((pokemon) => {
         return (
-          <li key={pokemon.id}>
+          <li className="pokemonList" key={pokemon.id}>
             <Pokemon pokemon={pokemon} />
           </li>
         );

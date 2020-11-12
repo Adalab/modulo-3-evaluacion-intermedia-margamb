@@ -10,9 +10,13 @@ const Pokemon = (props) => {
         title={props.pokemon.name}
       />
       <h3>{props.name}</h3>
-      <ul>
+      <ul className="pokemonsTypes">
         {props.pokemon.types.map((item, index) => {
-          return <li key={index}>{item}</li>;
+          return (
+            <li className="pokemonTypes" key={index}>
+              {item}
+            </li>
+          );
         })}
       </ul>
     </>
