@@ -2,8 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Pokemon = (props) => {
+  const handleAddFavorites = () => {
+    props.handleFavorite(props.id);
+  };
+
   return (
-    <>
+    <div
+      onClick={handleAddFavorites}
+      className={props.isFavorite ? 'favorite' : ''}
+    >
       <img src={props.url} alt={props.name} title={props.name} />
       <h3 className="namePokemon">{props.name}</h3>
       <ul className="pokemonsTypes">
@@ -15,7 +22,7 @@ const Pokemon = (props) => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
 
